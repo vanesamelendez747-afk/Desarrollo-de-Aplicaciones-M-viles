@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia | Desarrollo Móvil</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header class="hero" id="inicio">
+    <div class="hero-content">
+        <span class="etiqueta">ACADEMIA DIGITAL</span>
+        <h1>Desarrollo de Aplicaciones Móviles</h1>
+        <p>Explora, aprende y descubre las tecnologías que hacen funcionar las aplicaciones móviles.</p>
+        <a href="#temas" class="btn-principal">Comenzar aprendizaje ↓</a>
+    </div>
+</header>
+
+<nav class="navbar">
+    <a href="#inicio" class="logo">DEV<span>MOBILE</span></a>
+
+    <div class="nav-links">
+        <a href="#temas">Temas</a>
+        <a href="#videos">Videos</a>
+        <a href="#recursos">Recursos</a>
+    </div>
+
+    <button id="modoOscuro" class="btn-modo">🌙 Modo oscuro</button>
+</nav>
+
+<main>
+
+<section class="bienvenida">
+    <span class="etiqueta">APRENDE A TU RITMO</span>
+    <h2>Bienvenido a tu espacio de aprendizaje</h2>
+    <p>
+        Este tutorial reúne los conocimientos fundamentales
+        para comprender el desarrollo de aplicaciones móviles.
+        Encontrarás explicaciones, ejemplos, imágenes y recursos
+        audiovisuales.
+    </p>
+</section>
+
+<section id="temas" class="contenedor-temas">
+
+    <div class="titulo-seccion">
+        <span class="etiqueta">CONTENIDO ACADÉMICO</span>
+        <h2>Explora los temas</h2>
+        <p>Selecciona un tema para consultar su contenido.</p>
+    </div>
+
+    <input type="text" id="buscador"
+        placeholder="🔎 Buscar un tema..."
+        aria-label="Buscar temas">
+
+    <div class="tarjetas">
+
+        <!-- TEMA 1 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800"
+                 alt="Programación y código">
+            <div class="contenido-tarjeta">
+                <span class="numero">01 / PROGRAMACIÓN</span>
+                <h3>Control de versiones</h3>
+                <p>Conoce cómo se registran y administran los cambios de un proyecto.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>¿Qué es?</h4>
+                    <p>Es un sistema que registra los cambios realizados en archivos de un proyecto, permitiendo consultar versiones anteriores y trabajar en equipo.</p>
+
+                    <h4>¿Cuáles son?</h4>
+                    <ul>
+                        <li>Local: guarda las versiones en el equipo del usuario.</li>
+                        <li>Centralizado: utiliza un servidor central para administrar versiones. Ejemplo: SVN.</li>
+                        <li>Distribuido: cada colaborador dispone de una copia del historial. Ejemplo: Git.</li>
+                    </ul>
+
+                    <h4>Características</h4>
+                    <p>Historial de cambios, comparación de versiones, ramas de trabajo, recuperación de archivos y colaboración.</p>
+
+                    <h4>Ventajas y desventajas</h4>
+                    <p>Ventajas: facilita el trabajo en equipo, permite recuperar versiones y rastrear modificaciones.</p>
+                    <p>Desventajas: requiere aprendizaje, organización y puede generar conflictos al combinar cambios.</p>
+
+                    <h4>Funcionamiento y gestión de cambios</h4>
+                    <p>Se crea un repositorio, se modifican archivos, se registran los cambios mediante confirmaciones (commits) y se revisa el historial. Las ramas permiten desarrollar funciones por separado.</p>
+
+                    <h4>Ejemplos</h4>
+                    <p>Git, GitHub, GitLab, SVN y Mercurial.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=control+de+versiones+git+explicacion">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+        <!-- TEMA 2 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800"
+                 alt="Bases de datos">
+            <div class="contenido-tarjeta">
+                <span class="numero">02 / INFORMACIÓN</span>
+                <h3>Persistencia y acceso a datos</h3>
+                <p>Descubre cómo las aplicaciones almacenan y consultan información.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>Definición</h4>
+                    <p>La persistencia permite conservar información aunque una aplicación se cierre o un dispositivo se reinicie.</p>
+
+                    <h4>Características</h4>
+                    <p>Almacenamiento, recuperación, actualización, organización y protección de información.</p>
+
+                    <h4>Formas de persistencia móvil</h4>
+                    <ul>
+                        <li>Archivos: guardan documentos, imágenes y configuraciones.</li>
+                        <li>Bases de datos locales: almacenan información en el dispositivo, por ejemplo SQLite y Room.</li>
+                        <li>Bases de datos remotas: almacenan datos en servidores y se consultan mediante servicios web.</li>
+                    </ul>
+
+                    <h4>Tipos de datos almacenables</h4>
+                    <p>Texto, números, fechas, preferencias, imágenes, documentos, registros y datos estructurados.</p>
+
+                    <h4>Mecanismos de acceso</h4>
+                    <ul>
+                        <li>Bibliotecas de clases: proporcionan funciones para leer y escribir datos.</li>
+                        <li>SQLite: motor de base de datos relacional local.</li>
+                        <li>ORM: relaciona objetos del programa con tablas de bases de datos. Ejemplo: Room.</li>
+                    </ul>
+
+                    <h4>Autenticación y servicios web</h4>
+                    <p>La aplicación solicita identificación, obtiene o utiliza un token de acceso y realiza peticiones HTTP a una API. El servidor valida la solicitud y responde con información, frecuentemente en formato JSON.</p>
+
+                    <h4>Ejemplos</h4>
+                    <p>SQLite, Room, Firebase, archivos JSON y API REST.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=persistencia+datos+android+sqlite+room+firebase">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+        <!-- TEMA 3 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+                 alt="Tecnología electrónica">
+            <div class="contenido-tarjeta">
+                <span class="numero">03 / HARDWARE</span>
+                <h3>Gestión de sensores</h3>
+                <p>Aprende cómo los dispositivos móviles detectan su entorno.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>Definición</h4>
+                    <p>Los sensores son componentes que detectan cambios físicos o ambientales y proporcionan datos al dispositivo.</p>
+
+                    <h4>Tipos de sensores</h4>
+                    <ul>
+                        <li>Acelerómetro: detecta aceleración y movimiento.</li>
+                        <li>Giroscopio: mide la rotación.</li>
+                        <li>Proximidad: detecta objetos cercanos.</li>
+                        <li>Luz ambiental: mide la iluminación.</li>
+                        <li>GPS: proporciona información de ubicación.</li>
+                        <li>Magnetómetro: detecta el campo magnético.</li>
+                    </ul>
+
+                    <h4>Proceso de gestión</h4>
+                    <ol>
+                        <li>Habilitación: comprobar disponibilidad y permisos necesarios.</li>
+                        <li>Obtención: solicitar lecturas mediante las API correspondientes.</li>
+                        <li>Procesamiento: interpretar y utilizar los datos recibidos.</li>
+                    </ol>
+
+                    <h4>Ejemplos</h4>
+                    <p>Aplicaciones de navegación, brújulas, podómetros, juegos y ajuste automático del brillo.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=sensores+android+acelerometro+giroscopio">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+        <!-- TEMA 4 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                 alt="Desarrollo multimedia">
+            <div class="contenido-tarjeta">
+                <span class="numero">04 / DISEÑO DIGITAL</span>
+                <h3>Uso de recursos multimedia</h3>
+                <p>Conoce cómo integrar elementos visuales y audiovisuales.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>Definición</h4>
+                    <p>Son elementos digitales que combinan información visual, sonora y animada para mejorar la experiencia del usuario.</p>
+
+                    <h4>Tipos de recursos</h4>
+                    <ul>
+                        <li>Imágenes: fotografías, iconos e ilustraciones.</li>
+                        <li>Audio: música, sonidos y grabaciones.</li>
+                        <li>Video: contenido audiovisual.</li>
+                        <li>Animaciones: movimientos y transiciones.</li>
+                        <li>Elementos dinámicos: gráficos, botones y componentes interactivos.</li>
+                    </ul>
+
+                    <h4>Estructura de proyectos</h4>
+                    <p>En Android se utilizan carpetas como res/drawable para imágenes, res/mipmap para iconos, res/raw para archivos multimedia y res/animator para determinadas animaciones.</p>
+
+                    <h4>Componentes de software</h4>
+                    <p>ImageView, MediaPlayer, ExoPlayer mediante AndroidX Media3, Lottie y herramientas de animación de Jetpack Compose.</p>
+
+                    <h4>Ejemplos</h4>
+                    <p>Galerías de fotografías, reproductores de video, aplicaciones musicales y animaciones de interfaces.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=recursos+multimedia+android+studio">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+        <!-- TEMA 5 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800"
+                 alt="Servidores y servicios digitales">
+            <div class="contenido-tarjeta">
+                <span class="numero">05 / CONECTIVIDAD</span>
+                <h3>Servicios y notificaciones</h3>
+                <p>Comprende los procesos que funcionan en segundo plano.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>Definición</h4>
+                    <p>Son mecanismos que permiten realizar tareas, intercambiar información y comunicar eventos al usuario.</p>
+
+                    <h4>Tareas en segundo plano</h4>
+                    <p>Son operaciones que se ejecutan sin mantener abierta una pantalla de la aplicación, respetando las restricciones del sistema operativo.</p>
+
+                    <h4>Notificaciones</h4>
+                    <p>Son mensajes que informan al usuario sobre actualizaciones, recordatorios y eventos importantes. En Android se utilizan NotificationManager y canales de notificación.</p>
+
+                    <h4>Implementación</h4>
+                    <ul>
+                        <li>Proveedores de contenido: permiten compartir y consultar datos entre aplicaciones mediante permisos.</li>
+                        <li>Tareas en segundo plano: WorkManager permite programar trabajos diferibles.</li>
+                        <li>Notificaciones: se crean mediante NotificationCompat y se publican utilizando el administrador de notificaciones.</li>
+                    </ul>
+
+                    <h4>Servicios en la nube</h4>
+                    <p>Firebase, Google Cloud, Amazon Web Services y Microsoft Azure permiten almacenar datos, autenticar usuarios y ofrecer servicios.</p>
+
+                    <h4>Ejemplos</h4>
+                    <p>Recordatorios, sincronización de archivos, alertas de mensajes y actualización de datos.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=workmanager+notificaciones+android">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+        <!-- TEMA 6 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800"
+                 alt="Equipo de desarrollo tecnológico">
+            <div class="contenido-tarjeta">
+                <span class="numero">06 / HERRAMIENTAS</span>
+                <h3>Librerías y toolkits</h3>
+                <p>Explora las herramientas que facilitan la programación móvil.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>¿Qué es una librería?</h4>
+                    <p>Es un conjunto de funciones y clases reutilizables que ayudan a realizar tareas específicas.</p>
+
+                    <h4>¿Qué es un toolkit?</h4>
+                    <p>Es un conjunto de herramientas y componentes que facilitan el desarrollo de aplicaciones.</p>
+
+                    <h4>Librerías especializadas</h4>
+                    <ul>
+                        <li>Retrofit: comunicación con servicios web.</li>
+                        <li>Room: almacenamiento de datos.</li>
+                        <li>Glide: carga de imágenes.</li>
+                        <li>Coil: carga de imágenes en aplicaciones Kotlin.</li>
+                    </ul>
+
+                    <h4>Toolkits de desarrollo</h4>
+                    <ul>
+                        <li>Jetpack Compose: interfaces nativas declarativas para Android.</li>
+                        <li>Flutter: desarrollo multiplataforma con Dart.</li>
+                        <li>React Native: aplicaciones móviles con JavaScript y React.</li>
+                        <li>.NET MAUI: aplicaciones multiplataforma con C#.</li>
+                    </ul>
+
+                    <h4>Diferencias</h4>
+                    <p>Las librerías resuelven tareas específicas, mientras que los toolkits ofrecen un conjunto más amplio de herramientas y componentes para construir aplicaciones.</p>
+
+                    <h4>Ejemplos</h4>
+                    <p>Una aplicación Android puede combinar Jetpack Compose, Retrofit y Room.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=librerias+toolkits+desarrollo+movil">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+        <!-- TEMA 7 -->
+        <article class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800"
+                 alt="Seguridad informática">
+            <div class="contenido-tarjeta">
+                <span class="numero">07 / PROTECCIÓN</span>
+                <h3>Depuración y seguridad</h3>
+                <p>Aprende a detectar errores y proteger las aplicaciones.</p>
+
+                <details>
+                    <summary>Explorar contenido</summary>
+                    <h4>¿Qué es la depuración?</h4>
+                    <p>Es el proceso de identificar, analizar y corregir errores en el código de una aplicación.</p>
+
+                    <h4>¿Qué es la seguridad?</h4>
+                    <p>Es el conjunto de medidas que protegen los datos, usuarios y recursos de una aplicación contra accesos no autorizados.</p>
+
+                    <h4>Herramientas de depuración</h4>
+                    <ul>
+                        <li>Logcat: muestra mensajes y errores.</li>
+                        <li>Android Studio Debugger: permite analizar la ejecución del programa.</li>
+                        <li>Breakpoints: detienen temporalmente la ejecución.</li>
+                        <li>Profiler: analiza rendimiento y consumo de recursos.</li>
+                        <li>Lint: detecta problemas y posibles mejoras.</li>
+                    </ul>
+
+                    <h4>Medidas de seguridad</h4>
+                    <ul>
+                        <li>Utilizar HTTPS.</li>
+                        <li>Validar los datos de entrada.</li>
+                        <li>Proteger credenciales y tokens.</li>
+                        <li>Solicitar solamente los permisos necesarios.</li>
+                        <li>Mantener actualizadas las dependencias.</li>
+                    </ul>
+
+                    <h4>Ejemplos</h4>
+                    <p>Detectar errores de inicio de sesión, analizar fallos y proteger la comunicación con un servidor.</p>
+                </details>
+
+                <a class="btn-video" target="_blank"
+                   href="https://www.youtube.com/results?search_query=depuracion+seguridad+android+studio">
+                   ▶ Ver videos
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section id="videos" class="seccion-videos">
+    <span class="etiqueta">APRENDE VISUALMENTE</span>
+    <h2>Centro de videos educativos</h2>
+    <p>Consulta tutoriales y explicaciones en video sobre desarrollo móvil.</p>
+
+    <div class="videos-grid">
+        <a target="_blank" href="https://www.youtube.com/results?search_query=curso+android+studio+desde+cero">
+            ▶ Curso de Android Studio
+        </a>
+        <a target="_blank" href="https://www.youtube.com/results?search_query=curso+Kotlin+desde+cero">
+            ▶ Aprende Kotlin
+        </a>
+        <a target="_blank" href="https://www.youtube.com/results?search_query=jetpack+compose+tutorial">
+            ▶ Jetpack Compose
+        </a>
+    </div>
+</section>
+
+<section id="recursos" class="recursos">
+    <span class="etiqueta">CONSULTA Y APRENDE</span>
+    <h2>Recursos y documentación</h2>
+    <p>Fuentes oficiales para profundizar tus conocimientos.</p>
+
+    <ul>
+        <li><a target="_blank" href="https://developer.android.com/">Documentación oficial de Android</a></li>
+        <li><a target="_blank" href="https://kotlinlang.org/docs/home.html">Documentación de Kotlin</a></li>
+        <li><a target="_blank" href="https://git-scm.com/doc">Documentación de Git</a></li>
+        <li><a target="_blank" href="https://firebase.google.com/docs">Documentación de Firebase</a></li>
+        <li><a target="_blank" href="https://developer.android.com/develop/ui/compose">Jetpack Compose</a></li>
+        <li><a target="_blank" href="https://www.sqlite.org/docs.html">Documentación de SQLite</a></li>
+    </ul>
+</section>
+
+
+<section id="referencias" class="recursos">
+
+    <h2>Referencias bibliográficas</h2>
+
+    <p>Fuentes de consulta utilizadas para la elaboración
+    de este tutorial:</p>
+
+    <ul>
+        <li>
+            Android Developers. Documentación oficial de Android.
+            <a href="https://developer.android.com/"
+            target="_blank">Consultar fuente</a>
+        </li>
+
+        <li>
+            Kotlin. Documentación oficial del lenguaje.
+            <a href="https://kotlinlang.org/docs/"
+            target="_blank">Consultar fuente</a>
+        </li>
+
+        <li>
+            Git. Documentación oficial del control de versiones.
+            <a href="https://git-scm.com/doc"
+            target="_blank">Consultar fuente</a>
+        </li>
+
+        <li>
+            SQLite. Documentación oficial de bases de datos.
+            <a href="https://www.sqlite.org/docs.html"
+            target="_blank">Consultar fuente</a>
+        </li>
+
+        <li>
+            Firebase. Documentación de servicios en la nube.
+            <a href="https://firebase.google.com/docs"
+            target="_blank">Consultar fuente</a>
+        </li>
+
+        <li>
+            Android Developers. Jetpack Compose.
+            <a href="https://developer.android.com/develop/ui/compose"
+            target="_blank">Consultar fuente</a>
+        </li>
+    </ul>
+
+</section>
+
+
+
+
+</main>
+
+
+<footer>
+    <h2>DEV MOBILE LAB</h2>
+    <p>Elaborado por: Perla Vanesa Melendez Antonio</p>
+    <p>Proyecto académico: Desarrollo de Aplicaciones Móviles</p>
+    <p>Institución: Universidad Politecnica de Atlautla</p>
+    <p>Fecha de elaboración: 18 de noviembre de 2026</p>
+ 
+    <a href="#inicio">↑ Volver al inicio</a>
+</footer>
+
+<button id="subir" title="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
